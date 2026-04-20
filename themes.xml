@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Magnus_Veterans_Foundation_UI_Design" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/mvf_steel_blue</item>
+        <item name="colorOnPrimary">@color/mvf_light_gray</item>
+
+        <item name="colorSecondary">@color/mvf_burgundy</item>
+        <item name="colorOnSecondary">@color/mvf_light_gray</item>
+
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+</resources>

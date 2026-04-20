@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- App Name -->
+    <string name="app_name">Magnus_Veterans_Foundation_UI_Design</string>
+
+    <!-- Logo Description -->
+    <string name="mvf_logo">Magnus Veterans Foundation Logo</string>
+
+    <!-- Form Labels -->
+    <string name="first_name_label">First Name:</string>
+    <string name="last_name_label">Last Name:</string>
+    <string name="service_label">Service:</string>
+    <string name="sign_label">Tap to Sign:</string>
+
+    <!-- Form Hints -->
+    <string name="hint_first_name">Enter First Name</string>
+    <string name="hint_last_name">Enter Last Name</string>
+    <string name="hint_service_type">Enter Service Type</string>
+    <string name="hint_sign_label">Tap Here to Sign</string>
+
+</resources>
+

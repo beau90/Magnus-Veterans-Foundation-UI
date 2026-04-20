@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#36527E"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- MVF LOGO (Tablet Friendly + Light Gray Background + Matches Input Width) -->
+    <ImageView
+        android:id="@+id/mvfLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mvf_logo"
+        android:src="@drawable/mvf_logo"
+        android:background="#D7D7D7"
+        android:padding="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- FIRST NAME LABEL -->
+    <TextView
+        android:id="@+id/firstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/mvfLogo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- FIRST NAME INPUT -->
+    <EditText
+        android:id="@+id/firstNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_first_name"
+        android:autofillHints="givenName"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="#000000"
+        android:textColorHint="#5d5e5e"
+        android:background="#FFFFFF"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/firstNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LAST NAME LABEL -->
+    <TextView
+        android:id="@+id/lastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_name_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/firstNameInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- LAST NAME INPUT -->
+    <EditText
+        android:id="@+id/lastNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_last_name"
+        android:inputType="textPersonName"
+        android:autofillHints="familyName"
+        android:padding="12dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="#000000"
+        android:textColorHint="#5d5e5e"
+        android:background="#FFFFFF"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/lastNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SERVICE LABEL -->
+    <TextView
+        android:id="@+id/serviceTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/lastNameInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- SERVICE INPUT -->
+    <EditText
+        android:id="@+id/serviceTypeInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_service_type"
+        android:autofillHints="name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="#000000"
+        android:textColorHint="#5d5e5e"
+        android:background="#FFFFFF"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/serviceTypeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TAP TO SIGN LABEL -->
+    <TextView
+        android:id="@+id/tapToSignLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_label"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/serviceTypeInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- SIGNATURE BOX WITH TIMESTAMP INSIDE -->
+    <FrameLayout
+        android:id="@+id/signatureContainer"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tapToSignLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Signature drawing surface -->
+        <View
+            android:id="@+id/signatureBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" />
+
+        <!-- Timestamp inside signature box -->
+        <TextView
+            android:id="@+id/dateTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--/--/---- --:--"
+            android:textSize="12sp"
+            android:textColor="#4F5D73"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp" />
+
+    </FrameLayout>
+
+    <!-- BUTTONS BELOW SIGNATURE BOX -->
+    <LinearLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/signatureContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- CLEAR BUTTON -->
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="#8a3b3b"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- ENTER BUTTON -->
+        <Button
+            android:id="@+id/enterButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Enter"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="#8a3b3b"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
