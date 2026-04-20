@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MVF Primary Colors -->
+
+    <color name="mvf_steel_blue">#36527E</color>
+    <color name="mvf_light_gray">#D7D7D7</color>
+    <color name="mvf_charcoal_gray">#5D5E5E</color>
+
+    <!-- MVF Secondary Color -->
+
+    <color name="mvf_burgundy">#8A3B3B</color>
+    <color name="mvf_cool_slate_blue">#8098B6</color>
+
+</resources>
